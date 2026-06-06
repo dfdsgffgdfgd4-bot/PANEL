@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Irish Lagger - Download Script</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🎮 Irish Lagger</h1>
+                <p class="subtitle">Control Panel - Script Download</p>
+            </div>
+
+            <div class="content">
+                <!-- Seção de Login -->
+                <div id="login-section" class="section">
+                    <h2>🔐 Autenticação</h2>
+                    <div class="form-group">
+                        <label for="key">Digite sua Key:</label>
+                        <input 
+                            type="text" 
+                            id="key" 
+                            placeholder="Exemplo: ABC123DEF456GHI789" 
+                            class="input-field"
+                        >
+                    </div>
+                    <button id="verify-btn" class="btn btn-primary">Verificar Key</button>
+                    <div id="error-message" class="message error hidden"></div>
+                    <div id="success-message" class="message success hidden"></div>
+                </div>
+
+                <!-- Seção de Download (Hidden por padrão) -->
+                <div id="download-section" class="section hidden">
+                    <h2>✅ Key Verificada!</h2>
+                    
+                    <div class="info-box">
+                        <div class="info-item">
+                            <span class="label">Projeto:</span>
+                            <span id="project-name">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Role:</span>
+                            <span id="role-name">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">IP Atual:</span>
+                            <span id="current-ip">Carregando...</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">IPs Registrados:</span>
+                            <span id="ips-count">0</span>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button id="register-ip-btn" class="btn btn-success">📝 Registrar IP</button>
+                        <button id="download-btn" class="btn btn-primary">⬇️ Baixar Script</button>
+                        <button id="logout-btn" class="btn btn-secondary">🚪 Sair</button>
+                    </div>
+
+                    <div id="download-message" class="message hidden"></div>
+                </div>
+
+                <!-- Seção de Info -->
+                <div class="info-section">
+                    <h3>ℹ️ Informações</h3>
+                    <ul>
+                        <li>✅ Máximo de 3 IPs por key</li>
+                        <li>🔒 Autenticação por key obrigatória</li>
+                        <li>📊 Todos os downloads são rastreados</li>
+                        <li>⚠️ Compartilhar keys é proibido</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Irish Lagger © 2026 | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
