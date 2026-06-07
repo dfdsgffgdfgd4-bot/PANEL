@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 import logging
-from db.database import Database
+from utils.database import Database
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
